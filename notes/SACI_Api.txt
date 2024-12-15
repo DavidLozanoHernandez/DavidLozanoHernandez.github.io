@@ -1,0 +1,6 @@
+Este es un proyecto académico realizado en la Universidad Tecnológica de Izúcar de Matamoros, enfocado en la optimización de invernaderos. El sistema recopila información sobre el clima, el estado de las plantas y el agua, y se implementa un sistema de riego automático y una malla solar para controlar el ambiente de cultivo.
+
+El backend del sistema fue desarrollado utilizando Node.js, lo que permitió crear un entorno de servidor eficiente y escalable. Para la gestión de los datos, se utilizó MongoDB como base de datos NoSQL, facilitando el almacenamiento y acceso rápido a la información relacionada con el clima, las plantas y los sistemas de riego. Se crearon rutas específicas para cada módulo del sistema SACI, lo que permite gestionar de manera eficiente las solicitudes y respuestas entre el frontend y el backend.
+
+Además, se desarrollaron rutas adicionales para enviar datos que alimentan gráficos y visualizaciones en tiempo real, lo que permite a los usuarios monitorear las condiciones del invernadero de manera intuitiva y dinámica. La integración de estos elementos asegura un control más preciso y automatizado del ambiente en los invernaderos, optimizando el uso de recursos y mejorando la calidad de los cultivos.
+

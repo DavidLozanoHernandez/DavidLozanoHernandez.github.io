@@ -1,0 +1,5 @@
+Este es un proyecto académico realizado en la Universidad Tecnológica de Izúcar de Matamoros, enfocado en la optimización de invernaderos. El sistema recopila información sobre el clima, el estado de las plantas y el agua, y se implementa un sistema de riego automático y una malla solar para controlar el ambiente de cultivo.
+
+El proyecto fue desarrollado con la ayuda de Arduino y sensores para la recolección de datos, los cuales se enviaban a un archivo en Python que transfería la información a una base de datos MongoDB. Posteriormente, estos datos eran consultados a través de una API.
+
+Para mostrar la información, se creó un sitio web y una aplicación híbrida. En el sitio web, los usuarios podían ver los datos y gráficos en tiempo real, así como consultar información histórica ingresando una fecha específica. La aplicación, por su parte, permitía monitorear el ambiente del invernadero y controlar la malla solar y el sistema de riego.

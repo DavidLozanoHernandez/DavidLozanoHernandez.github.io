@@ -1,0 +1,10 @@
+Este proyecto fue desarrollado para la empresa de viajes "Travel García", especializada en servicios turísticos. La iniciativa surgió con el objetivo de automatizar la administración de la agencia, que hasta ese momento se gestionaba de manera manual en papel. Así nació Turisma, una PWA y una aplicación móvil diseñadas para facilitar la reserva de viajes y la administración de las excursiones.
+
+La aplicación móvil fue desarrollada con React Native y CSS. Esta app realiza consultas a una API para mostrar la información de las excursiones creadas por el administrador a través de la PWA. Los usuarios pueden registrarse para comenzar sus aventuras y, al realizar una reserva, se les presenta una interfaz para seleccionar su transporte (Combi o Autobús), dependiendo de la excursión. Los usuarios pueden elegir sus asientos, siempre que estén disponibles.
+
+Una vez realizada la reserva, el usuario recibirá un correo electrónico con la información de la misma. Además, será redirigido a la sección de sus reservas para proceder con el pago, el cual puede ser total o parcial. El pago puede realizarse mediante transferencia bancaria o en efectivo. Tras completar la reserva, se generará un recibo que debe ser enviado o mostrado al administrador para que este proceda a aceptar el pago. Una vez confirmado, la reserva quedará finalizada, y el usuario recibirá un correo con todos los detalles de la misma.
+
+Asimismo, los usuarios pueden personalizar su perfil, subiendo una foto y modificando sus datos personales, como nombre y número telefónico.
+
+
+

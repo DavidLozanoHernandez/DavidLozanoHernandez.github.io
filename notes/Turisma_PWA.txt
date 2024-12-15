@@ -1,0 +1,5 @@
+Este proyecto fue desarrollado para la empresa de viajes "Travel García", especializada en servicios turísticos. La iniciativa surgió con el objetivo de automatizar la administración de la agencia, que hasta ese momento se gestionaba de manera manual en papel. Así nació Turisma, una PWA y una aplicación móvil diseñadas para facilitar la reserva de viajes y la administración de las excursiones.
+
+La PWA fue desarrollada con HTML, Bootstrap y JavaScript, y realiza consultas a una API para mostrar la información de las excursiones y los usuarios registrados, quienes comienzan a crear su historial de viajes.
+
+Además, la PWA incluye una sección para administradores, lo que permite un mejor control y gestión de las excursiones al poder visualizarla en una laptop o PC.

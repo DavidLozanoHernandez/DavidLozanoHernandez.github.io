@@ -1,0 +1,9 @@
+Este proyecto fue desarrollado para la empresa de viajes "Travel García", especializada en servicios turísticos. La iniciativa surgió con el objetivo de automatizar la administración de la agencia, que hasta ese momento se gestionaba de manera manual en papel. Así nació Turisma, una PWA y una aplicación móvil diseñadas para facilitar la reserva de viajes y la administración de las excursiones.
+
+El backend del sistema fue desarrollado utilizando NestJS, PostgreSQL y Prisma para gestionar las consultas a la base de datos y la lógica del sistema. Se implementaron diversas rutas para manejar las operaciones CRUD tanto para administradores como para usuarios, permitiendo realizar tareas clave como la gestión de excursiones, reservas y usuarios.
+
+Entre las características destacadas, se incluyeron servicios para el envío de mensajes personalizados a correos electrónicos y la generación de tokens enviados por SMS al número de teléfono del usuario, mejorando la comunicación y seguridad. Además, se implementó almacenamiento en la nube para la gestión eficiente de imágenes relacionadas con las excursiones y perfiles de usuario.
+
+Otra funcionalidad importante es el controlador de tiempo para las reservaciones, que asegura que, si una reserva no es pagada en un plazo de 48 horas, se cancele automáticamente y los asientos vuelvan a estar disponibles para otros usuarios. También se añadió una opción para cambiar el estado de las reservas de acuerdo con las reglas de negocio, permitiendo una gestión más flexible y adaptable a las necesidades de la agencia.
+
+Este enfoque integral facilita tanto la experiencia del usuario como la administración interna, asegurando un proceso de reserva y gestión de excursiones más eficiente y automatizado.

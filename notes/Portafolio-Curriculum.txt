@@ -1,0 +1,1 @@
+Este proyecto fue creado para mostrar mi experiencia en el ámbito de la programación y ofrecer una visión general de mis habilidades. Está desarrollado utilizando HTML, Bootstrap y JavaScript.
