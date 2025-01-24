@@ -1,0 +1,46 @@
+Este es un proyecto realizado para aprobar una entrevista en la empresa Sysne Grupo Pregad, la prueba trato de realizar un crud para usuarios.
+
+Ejercicio:
+Ejercicio: Sistema de Gestión de Productos Electrónicos 
+
+Objetivo:
+Desarrollar una aplicación web sencilla para gestionar productos electrónicos. La aplicación debe permitir a los usuarios crear, leer, actualizar y eliminar productos, y asociar cada producto a un usuario. Los datos se manejarán a través de una API.
+
+Requisitos:
+HTML: Estructura de la aplicación.
+CSS: Estilos básicos para la aplicación.
+*Puntos Extra si manejan para el front un framework como React o Angular
+JavaScript: Lógica para manejar las operaciones CRUD y la interacción con la API.
+
+Datos para Registrar un Producto:
+
+ID: Un identificador único para cada producto (puede ser generado automáticamente).
+Nombre del Producto: El nombre del producto electrónico.
+Descripción: Una descripción detallada del producto (opcional).
+Fecha de Adquisición: La fecha y hora en que se adquirió el producto.
+Estado: El estado del producto (nuevo, usado, defectuoso).
+Usuario Asociado: El usuario al que está asociado el producto.
+Datos para Consultar un Producto:
+
+Nombre del Producto: Para mostrar el nombre del producto.
+Descripción: Para mostrar una descripción detallada.
+Fecha de Adquisición: Para mostrar cuándo se adquirió el producto.
+Estado: Para indicar el estado del producto.
+Usuario Asociado: Para mostrar el usuario al que está asociado el producto.
+HTML: Define la estructura básica de la aplicación.
+CSS: Añade estilo para hacer la aplicación visualmente atractiva.
+JavaScript: Implementa la lógica para manejar las operaciones CRUD y la interacción con la API JSON simulada.
+
+NOTA: Para guardar los datos en un gestor de base de datos o en algún sitio utilizar alguna de estas opciones, la que mejor se adapte para ti para resolver el problema:
+
+Node.js
+.NET
+IndexedDB
+LocalStorage
+Servidor PHP
+API JSON simulada con ({JSON} Placeholder)
+
+Puntos extra: 
+1.- Añade un captcha simple en la página de registro y actualización de productos.
+2.- El Diseño de tu pagina debe ser resposivo (dispositivos móviles, tabletas y escritorio)
+3.- La interfaz de inicio debe ser hecha con boostrap y con un diseño amigable para la interfaz de usuario
