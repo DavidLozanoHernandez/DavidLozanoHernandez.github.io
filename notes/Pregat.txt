@@ -1,0 +1,3 @@
+Este proyecto fue desarrollado para la empresa Sysne como parte de mis practicas profecionales.
+
+En esta pagina web se visualiza la informacion de su objetivo como empresa y de su principal herramienta SCP "Sistema de Control Policial".
