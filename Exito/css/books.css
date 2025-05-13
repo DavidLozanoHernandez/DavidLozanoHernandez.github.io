@@ -1,0 +1,87 @@
+.card {
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    background: #FFBB77;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow:
+        10px 10px 25px #e6a45f,
+        /* sombra oscura */
+        -10px -10px 25px #ffd6a1;
+    /* sombra clara */
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow:
+        5px 5px 15px #e6a45f,
+        -5px -5px 15px #ffd6a1;
+}
+
+.contImg {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.img {
+    width: 80%;
+    border-radius: 15px;
+}
+
+.content h2 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: #4a2f18;
+}
+
+.content p {
+    color: #5c3b1f;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-book {
+    display: inline-block;
+    background-color: #FFBB77;
+    color: #333;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: bold;
+    box-shadow: 8px 8px 15px #cc955f, -8px -8px 15px #ffc587;
+    transition: all 0.3s ease;
+}
+
+.btn-book:hover {
+    box-shadow: inset 6px 6px 10px #cc955f, inset -6px -6px 10px #ffc587;
+    transform: translateY(2px);
+}
+
+@media (min-width: 992px) {
+    .card {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .contImg {
+        width: 50%;
+    }
+
+    .content {
+        width: 50%;
+    }
+
+    .button-container {
+
+        margin-top: 20px;
+        width: 100%;
+        text-align: end;
+    }
+}

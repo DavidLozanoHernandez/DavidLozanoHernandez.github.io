@@ -1,0 +1,115 @@
+body {
+    background-color: #FFBB77;
+}
+
+header {
+    z-index: 2000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main {
+    display: flex;
+    padding: 2%;
+    margin-top: 10%;
+    width: 100%;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.playwrite-dk-loopet {
+    font-family: "Playwrite DK Loopet", cursive;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    /* Puedes usar 100, 200, 300 o 400 */
+    font-style: normal;
+}
+
+/* Estilos generales (móvil primero) */
+.navbar .nav-link,
+.offcanvas .nav-link {
+    color: #FFBB77
+}
+
+.navbar .navbar-brand {
+    color: #3B3B3B
+}
+
+.offcanvas-title {
+    color: #FFBB77
+}
+
+.navbar .nav-link svg {
+    fill: #FFBB77;
+}
+
+.cont {
+    margin: auto;
+    width: 90%;
+    background: #FFBB77;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow:
+        10px 10px 25px #e6a45f,
+        /* sombra oscura */
+        -10px -10px 25px #ffd6a1;
+    /* sombra clara */
+    transition: all 0.3s ease;
+}
+
+.cont:hover {
+    box-shadow:
+        5px 5px 15px #e6a45f,
+        -5px -5px 15px #ffd6a1;
+}
+
+.contImg {
+    width: 100%;
+    text-align: center;
+}
+
+.img {
+    width: 70%;
+    border-radius: 50px;
+}
+
+.contText {
+    margin-top: 5%;
+}
+
+/* Estilos para pantallas grandes (>= 992px = desktop) */
+@media (min-width: 992px) {
+
+    .main {
+        margin-top: 2%;
+    }
+
+    .navbar .nav-link {
+        color: #3B3B3B
+    }
+
+    .navbar .navbar-brand {
+        color: #FF6F61
+    }
+
+    .navbar .navbar-brand {
+        color: #3B3B3B
+    }
+
+    .navbar .nav-link svg {
+        fill: #3B3B3B;
+    }
+
+    .cont {
+        display: flex;
+    }
+
+    .contImg {
+        width: 150%;
+        align-content: center;
+        text-align: center;
+    }
+
+    .contText {
+        margin-top: 0;
+    }
+}
