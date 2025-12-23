@@ -1,0 +1,5 @@
+Para el desarrollo del backend se utilizó .NET Core, implementando la Arquitectura Limpia (Clean Architecture) con el fin de mejorar la seguridad, mantenibilidad y escalabilidad del sistema.
+
+Se empleó Entity Framework como ORM para la conexión y gestión de la base de datos SQL Server, permitiendo un acceso eficiente y estructurado a la información.
+
+Asimismo, se realizó la creación y modificación de APIs existentes, optimizando su funcionamiento y adaptándolas a los nuevos requerimientos del sistema.

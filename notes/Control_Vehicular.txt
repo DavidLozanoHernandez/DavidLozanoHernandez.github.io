@@ -1,0 +1,5 @@
+Este proyecto fue desarrollado con el objetivo de automatizar la gestión de los vehículos de la flota empresarial. Ante esta necesidad, se propone la implementación de una aplicación web denominada Control Vehicular, diseñada como una PWA (Progressive Web App).
+
+La aplicación permitirá automatizar la programación de mantenimientos, así como facilitar la generación de reportes detallados relacionados con próximos pagos, vencimientos y mantenimientos, mediante un sistema de calendarización integrado.
+
+Esta herramienta busca optimizar la operatividad de la flota, reducir los costos operativos y mejorar la eficiencia en la gestión de los vehículos, proporcionando información oportuna y centralizada para una adecuada toma de decisiones.
