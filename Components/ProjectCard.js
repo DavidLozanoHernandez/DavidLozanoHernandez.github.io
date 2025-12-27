@@ -99,6 +99,14 @@ const proyects = [
     infoFile: "notes/Pregat.txt"
     },
     {
+    image: "Images/Sysne.png",
+    title: "Sysne",
+    techIcons: ["Images/react.png", "Images/bootstrap.png"],
+    websiteLink: "https://synee.vercel.app/",
+    githubLink: "https://github.com/DavidLozanoHernandez/Synee",
+    infoFile: "notes/Sysne.txt"
+    },
+    {
     image: "Images/Control_Vehicular.jpeg",
     title: "Control Vehicular",
     techIcons: ["Images/csharp.png", "Images/blazor.png"],
