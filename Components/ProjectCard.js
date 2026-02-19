@@ -112,6 +112,14 @@ const proyects = [
     techIcons: ["Images/csharp.png", "Images/blazor.png"],
     infoFile: "notes/Control_Vehicular.txt"
     },
+    {
+    image: "Images/Aythen.png",
+    title: "Aythen",
+    techIcons: ["Images/react.png", "Images/css.png"],
+    websiteLink: "https://aythen.com/",
+    githubLink: "https://github.com/aythen3/facturagpt/tree/dev-davidLozano",
+    infoFile: "notes/Aythen.txt"
+    },
 ];
 
 function createBackendCard({
@@ -199,7 +207,7 @@ const backendProjects = [
     },
     {
         title: "Control Vehicular",
-        techIcons: ["Images/csharp.png","Images/net.png"],
+        techIcons: ["Images/csharp.png","Images/net.png", "Images/servidor-sql.png"],
         infoFile: "notes/Control_Vehicular_Api.txt"
     }
 ];

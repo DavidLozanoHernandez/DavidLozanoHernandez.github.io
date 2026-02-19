@@ -1,0 +1,3 @@
+Fui responsable de implementar el sistema de cambio de tema claro a oscuro en toda la aplicación. Se creó un archivo CSS global donde se definieron las variables de color necesarias para el tema oscuro, asegurando consistencia visual en la interfaz.
+
+Además, se refactorizaron componentes que no contaban con diseño responsivo, mejorando su adaptabilidad a distintos dispositivos. También se desarrolló la funcionalidad que permite al usuario personalizar el color principal del sistema, el cual se aplica dinámicamente a íconos, botones, navbar, sidebar y otros elementos de la interfaz.
