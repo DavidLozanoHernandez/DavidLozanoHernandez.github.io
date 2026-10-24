@@ -1,0 +1,9 @@
+NexusBot - Automatización de WhatsApp & Asistente Inteligente.
+
+Plataforma SaaS diseñada para conectar y automatizar la comunicación de empresas y negocios con sus clientes a través de WhatsApp. Ofrece sincronización instantánea mediante escaneo de código QR, respuestas inteligentes basadas en inteligencia artificial, flujos de atención automáticos, gestión masiva de mensajes y panel multi-agente en tiempo real.
+
+Tecnologías implementadas:
+- Vue.js para la interfaz de usuario interactiva, paneles reactivos y gestión en tiempo real
+- Node.js para el servidor backend, webhooks y conexión a las APIs de WhatsApp
+- MySQL para el almacenamiento de contactos, conversaciones, plantillas y configuraciones
+- Tailwind CSS para un diseño moderno, intuitivo y escalable.

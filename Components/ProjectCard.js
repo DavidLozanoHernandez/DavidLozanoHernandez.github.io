@@ -19,7 +19,7 @@ function createCard({
 
                 <!-- Solo muestra el botón de GitHub si existe -->
                 ${githubLink ? `
-                    <button type="button" class="btn btn-secondary" onclick="window.location.href='${githubLink}'">
+                    <button type="button" class="btn btn-card-action" onclick="window.location.href='${githubLink}'" title="Ver código en GitHub" aria-label="Ver código en GitHub">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-github" viewBox="0 0 16 16">
                         <path
@@ -31,7 +31,7 @@ function createCard({
 
                 <!-- Solo muestra el botón de Website si existe -->
                 ${websiteLink ? `
-                    <button type="button" class="btn btn-secondary" onclick="window.location.href='${websiteLink}'">
+                    <button type="button" class="btn btn-card-action" onclick="window.location.href='${websiteLink}'" title="Visitar sitio web" aria-label="Visitar sitio web">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-link-45deg" viewBox="0 0 16 16">
                         <path
@@ -46,7 +46,7 @@ function createCard({
 
                 <!-- Solo muestra el botón de Info si existe -->
                 ${infoFile ? `
-                    <button type="button" class="btn btn-secondary openModalBtn" data-file="${infoFile}">
+                    <button type="button" class="btn btn-card-action openModalBtn" data-file="${infoFile}" title="Más información" aria-label="Más información del proyecto">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-info" viewBox="0 0 16 16">
                         <path
@@ -62,6 +62,48 @@ function createCard({
 }
 
 const proyects = [
+    {
+        image: "Images/Congreso_Docente_2026.png",
+        title: "5º Congreso Internacional de Formación Docente Mazatlán 2026",
+        techIcons: ["Images/icons8-ver-js-64.png", "Images/typescript.png", "Images/icons8-viento-de-cola-css-64.png"],
+        infoFile: "notes/Congreso_Docente_2026.txt"
+    },
+    {
+        image: "Images/NexusBot.png",
+        title: "NexusBot - Automatización de WhatsApp",
+        techIcons: ["Images/icons8-ver-js-64.png", "Images/icons8-viento-de-cola-css-64.png"],
+        infoFile: "notes/NexusBot.txt"
+    },
+    {
+        image: "Images/Transformer_Core.png",
+        title: "Transformer Core OS - Gestión de Servicios",
+        techIcons: ["Images/icons8-ver-js-64.png", "Images/icons8-viento-de-cola-css-64.png"],
+        infoFile: "notes/Transformer_Core.txt"
+    },
+    {
+        image: "Images/CIEEPE.png",
+        title: "CIEEPE - Centro de Investigación de Educación Especial y Políticas Educativas",
+        techIcons: ["Images/php.png", "Images/icons8-viento-de-cola-css-64.png"],
+        infoFile: "notes/CIEEPE.txt"
+    },
+    {
+        image: "Images/Comida_Local.png",
+        title: "ComidaToGo - Delivery & Restaurantes",
+        techIcons: ["Images/icons8-ver-js-64.png", "Images/icons8-viento-de-cola-css-64.png"],
+        infoFile: "notes/Comida_Local.txt"
+    },
+    {
+        image: "Images/Mercadito.png",
+        title: "Mercadito - Punto de Venta (POS)",
+        techIcons: ["Images/icons8-ver-js-64.png", "Images/typescript.png", "Images/css.png"],
+        infoFile: "notes/Mercadito.txt"
+    },
+    {
+        image: "Images/Tesiutto.png",
+        title: "Tesiutto - Cortinas & Persianas",
+        techIcons: ["Images/icons8-ver-js-64.png", "Images/typescript.png", "Images/icons8-viento-de-cola-css-64.png"],
+        infoFile: "notes/Tesiutto.txt"
+    },
     {
     image: "Images/Pagina_Portafolio.png",
     title: "Página de Portafolio Personal",
@@ -126,6 +168,7 @@ function createBackendCard({
     techIcons,
     title,
     githubLink,
+    websiteLink,
     infoFile
 }) {
     return `
@@ -140,8 +183,8 @@ function createBackendCard({
                     <h5 class="card-title">${title}</h5>
 
                     ${githubLink ? `
-                        <button type="button" class="btn btn-secondary"
-                            onclick="window.location.href='${githubLink}'">
+                        <button type="button" class="btn btn-card-action"
+                            onclick="window.location.href='${githubLink}'" title="Ver repositorio" aria-label="Ver repositorio en GitHub">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-github" viewBox="0 0 16 16">
                                 <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54
@@ -164,9 +207,23 @@ function createBackendCard({
                         </button>
                     ` : ''}
 
+                    ${websiteLink ? `
+                        <button type="button" class="btn btn-card-action" onclick="window.location.href='${websiteLink}'" title="Visitar sitio" aria-label="Visitar sitio web">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-link-45deg" viewBox="0 0 16 16">
+                            <path
+                                d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z">
+                            </path>
+                            <path
+                                d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z">
+                            </path>
+                        </svg>
+                        </button>
+                    ` : ''}
+
                     ${infoFile ? `
-                        <button type="button" class="btn btn-secondary openModalBtn"
-                            data-file="${infoFile}">
+                        <button type="button" class="btn btn-card-action openModalBtn"
+                            data-file="${infoFile}" title="Detalles técnicos" aria-label="Detalles técnicos">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                 fill="currentColor" class="bi bi-info" viewBox="0 0 16 16">
                                 <path d="m8.93 6.588-2.29.287-.082.38.45.083
@@ -187,6 +244,41 @@ function createBackendCard({
 }
 
 const backendProjects = [
+    {
+        title: "5º Congreso Internacional de Formación Docente",
+        techIcons: ["Images/node.png", "Images/typescript.png", "Images/prisma.png", "Images/icons8-mysql-64.png"],
+        infoFile: "notes/Congreso_Docente_2026.txt"
+    },
+    {
+        title: "NexusBot (Backend & WhatsApp Service)",
+        techIcons: ["Images/node.png", "Images/icons8-mysql-64.png"],
+        infoFile: "notes/NexusBot.txt"
+    },
+    {
+        title: "Transformer Core OS (Backend)",
+        techIcons: ["Images/php.png", "Images/icons8-mysql-64.png"],
+        infoFile: "notes/Transformer_Core.txt"
+    },
+    {
+        title: "CIEEPE (Backend & Base de Datos)",
+        techIcons: ["Images/php.png", "Images/icons8-mysql-64.png"],
+        infoFile: "notes/CIEEPE.txt"
+    },
+    {
+        title: "ComidaToGo - Delivery (Backend)",
+        techIcons: ["Images/php.png", "Images/icons8-mysql-64.png"],
+        infoFile: "notes/Comida_Local.txt"
+    },
+    {
+        title: "Mercadito - Punto de Venta POS (API)",
+        techIcons: ["Images/node.png", "Images/typescript.png", "Images/postgresql.png", "Images/prisma.png"],
+        infoFile: "notes/Mercadito.txt"
+    },
+    {
+        title: "Tesiutto (API & Base de Datos)",
+        techIcons: ["Images/node.png", "Images/typescript.png", "Images/prisma.png", "Images/icons8-mysql-64.png"],
+        infoFile: "notes/Tesiutto.txt"
+    },
     {
         title: "SACI (Sistema Automatizado para Cultivos de Invernadero)",
         techIcons: ["Images/node.png","Images/mongo.png"],

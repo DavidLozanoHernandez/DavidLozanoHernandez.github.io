@@ -4,31 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio y Curriculum de David Lozano Hernandez, Programador Back-end y Front-end Jr.">
-    <title>David Lozano Hernandez - Portafolio</title>
-    
+    <meta name="description"
+        content="Portafolio y Curriculum de David Lozano Hernandez, Arquitecto de Software y Desarrollador Full Stack. Diseño de sistemas escalables, APIs robustas y arquitecturas modernas en la nube.">
+    <title>David Lozano Hernandez - Arquitecto de Software & Full Stack</title>
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    
+
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    
+
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/png" href="Images/portafolio.png">
+
+    <!-- Anti-flicker Theme Initialization -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-bs-theme', savedTheme);
+        })();
+    </script>
 </head>
 
 <body>
     <header>
         <nav class="navbar glass-nav py-3">
-            <div class="container">
-                <a class="navbar-brand text-white fw-bold m-0" href="#">
-                    <i class="bi bi-code-slash text-accent me-2"></i>Portafolio - Curriculum
+            <div class="container d-flex justify-content-between align-items-center">
+                <a class="navbar-brand text-white fw-bold m-0 d-flex align-items-center" href="#">
+                    <i class="bi bi-diagram-3-fill text-accent me-2"></i>
+                    <span>David Lozano Hernandez</span>
+                    <span class="badge badge-architect ms-3 d-none d-sm-inline-block">Software Architect</span>
                 </a>
-                <a href="./Exito/index.html">
-                    Bibliografía
-                </a>
+                <div class="d-flex align-items-center gap-2">
+                    <button id="themeToggleBtn" class="btn btn-theme-toggle d-flex align-items-center gap-2"
+                        aria-label="Cambiar tema claro / oscuro" title="Alternar tema">
+                        <span class="theme-icon-box">
+                            <i id="themeIcon" class="bi bi-sun-fill text-warning"></i>
+                        </span>
+                        <span id="themeText" class="theme-text-label d-none d-sm-inline">Oscuro</span>
+                    </button>
+                    <a href="./Exito/index.html"
+                        class="btn btn-nav-action d-flex align-items-center px-3 py-2 text-decoration-none"
+                        aria-label="Ir a Bibliografía y Desarrollo Personal">
+                        <i class="bi bi-journal-bookmark-fill text-accent me-2"></i>
+                        <span>Bibliografía</span>
+                    </a>
+                </div>
             </div>
         </nav>
     </header>
@@ -37,33 +60,43 @@
         <!-- Hero Section -->
         <section id="hero" class="row align-items-center mb-5 pb-4 border-bottom border-secondary">
             <div class="col-12 col-md-4 d-flex justify-content-center mb-4 mb-md-0">
-                <img src="Images/Photo-Profile.jpeg" class="img-fluid rounded-circle profile-img" alt="Foto de perfil de David Lozano" width="280" height="280">
+                <img src="Images/Photo-Profile.jpeg" class="img-fluid rounded-circle profile-img"
+                    alt="Foto de perfil de David Lozano" width="280" height="280">
             </div>
 
             <div class="col-12 col-md-8">
                 <h1 class="display-4 fw-bold mb-2">David Lozano Hernandez</h1>
-                <h2 class="h3 text-accent mb-3">Programador Back-end y Front-end Jr</h2>
-                
-                <div class="fs-5 text-muted-custom mb-4 d-flex align-items-center">
-                    <i class="bi bi-geo-alt-fill me-2 text-accent"></i>
-                    Izúcar de Matamoros, Pue.
+                <h2 class="h3 text-accent mb-3">Arquitecto de Software & Desarrollador Full Stack</h2>
+
+                <div class="fs-5 text-muted-custom mb-4 d-flex align-items-center flex-wrap gap-2">
+                    <span class="d-flex align-items-center">
+                        <i class="bi bi-geo-alt-fill me-2 text-accent"></i>
+                        Izúcar de Matamoros, Pue.
+                    </span>
+                    <span class="text-secondary d-none d-md-inline">•</span>
+                    <span class="badge-role px-3 py-1">
+                        <i class="bi bi-shield-check text-accent me-1"></i>Sistemas Escalables, Microservicios & Cloud
+                    </span>
                 </div>
 
                 <div class="d-flex flex-wrap gap-3">
-                    <a href="mailto:davidlh257@gmail.com?subject=Asunto%20del%20mensaje&body=Hola,%20quiero%20saber%20mas%20de%20ti."
-                        class="btn btn-primary-custom btn-lg d-flex align-items-center px-4" aria-label="Enviar un correo a David">
+                    <a href="mailto:davidlh257@gmail.com?subject=Contacto%20Profesional&body=Hola%20David,%20me%20gustar%C3%ADa%20conversar%20sobre%20un%20proyecto."
+                        class="btn btn-primary-custom btn-lg d-flex align-items-center px-4"
+                        aria-label="Enviar un correo a David">
                         <i class="bi bi-envelope-fill me-2"></i>
                         Contáctame
                     </a>
 
-                    <a href="https://www.linkedin.com/in/david-lozano-hernandez-39a7b320a/" target="_blank" rel="noopener noreferrer"
-                        class="btn btn-social btn-lg d-flex align-items-center px-4" aria-label="Ver perfil de LinkedIn de David">
+                    <a href="https://www.linkedin.com/in/david-lozano-hernandez-39a7b320a/" target="_blank"
+                        rel="noopener noreferrer" class="btn btn-social btn-lg d-flex align-items-center px-4"
+                        aria-label="Ver perfil de LinkedIn de David">
                         <i class="bi bi-linkedin me-2"></i>
                         LinkedIn
                     </a>
 
                     <a href="https://github.com/DavidLozanoHernandez" target="_blank" rel="noopener noreferrer"
-                        class="btn btn-social btn-lg d-flex align-items-center px-4" aria-label="Ver perfil de GitHub de David">
+                        class="btn btn-social btn-lg d-flex align-items-center px-4"
+                        aria-label="Ver perfil de GitHub de David">
                         <i class="bi bi-github me-2"></i>
                         GitHub
                     </a>
@@ -75,36 +108,164 @@
         <section id="about" class="mb-5 fade-up">
             <h2 class="mb-4"><i class="bi bi-person-lines-fill text-accent me-2"></i>Sobre mí</h2>
             <div class="glass-card">
-                <p class="fs-5 m-0 text-muted-custom lh-lg"> 
-                    Soy una persona disciplinada con experiencia en desarrollo backend y frontend, así como en la
-                    administración de bases de datos y proyectos con Arduino. He destacado en el ámbito académico por
-                    desarrollar proyectos escalables y de calidad. Estoy buscando aplicar mi experiencia de desarrollo
-                    backend y frontend en proyectos innovadores que promuevan la eficiencia y automatización.
+                <p class="fs-5 m-0 text-muted-custom lh-lg">
+                    Ingeniero en Tecnologías de la Información especializado en <strong class="text-white">Arquitectura
+                        de Software</strong> y <strong class="text-white">Desarrollo Full Stack</strong>. Cuento con
+                    sólida experiencia liderando el diseño y la evolución de sistemas empresariales escalables,
+                    modulares y de alta disponibilidad, aplicando principios de <strong class="text-white">Clean
+                        Architecture</strong>, <strong class="text-white">Microservicios</strong> y desarrollo de APIs
+                    RESTful seguras.
+                </p>
+                <p class="fs-5 mt-3 mb-0 text-muted-custom lh-lg">
+                    Mi dominio abarca el ecosistema backend (.NET Core, NestJS, Node.js, C#), frontend moderno (React,
+                    Vue.js, Blazor, TypeScript), orquestación y contenerización con <strong
+                        class="text-white">Docker</strong>, y el diseño optimizado de bases de datos relacionales y
+                    NoSQL (PostgreSQL, SQL Server, MySQL, MongoDB) con Prisma ORM. Comprometido con la gobernanza
+                    técnica, la resiliencia del software y la automatización inteligente.
                 </p>
             </div>
         </section>
 
         <!-- Technologies Section -->
         <section id="skills" class="mb-5 fade-up">
-            <h2 class="mb-4"><i class="bi bi-braces text-accent me-2"></i>Tecnologías</h2>
-            <div class="glass-card mb-4">
-                <h3 class="h5 text-accent mb-3">Dominadas</h3>
-                <div class="d-flex flex-wrap align-items-center gap-3">
-                    <img src="Images/js.png" alt="JavaScript" class="tech-icon" title="JavaScript">
-                    <img src="Images/react.png" alt="React" class="tech-icon" title="React">
-                    <img src="Images/node.png" alt="Node.js" class="tech-icon" title="Node.js">
-                    <img src="Images/html.png" alt="HTML5" class="tech-icon" title="HTML5">
-                    <img src="Images/css.png" alt="CSS3" class="tech-icon" title="CSS3">
-                    <img src="Images/typescript.png" alt="TypeScript" class="tech-icon" title="TypeScript">
-                    <img src="Images/nest.png" alt="NestJS" class="tech-icon" title="NestJS">
-                    <img src="Images/php.png" alt="PHP" class="tech-icon" title="PHP">
+            <h2 class="mb-4"><i class="bi bi-braces text-accent me-2"></i>Ecosistema Tecnológico & Especialidades</h2>
+
+            <div class="row g-4">
+                <!-- Arquitectura & DevOps -->
+                <div class="col-12 col-lg-6">
+                    <div class="glass-card h-100">
+                        <h3 class="h5 text-accent mb-3 d-flex align-items-center">
+                            <i class="bi bi-diagram-3-fill me-2"></i>Arquitectura, Cloud & DevOps
+                        </h3>
+                        <div class="tech-grid">
+                            <div class="tech-pill">
+                                <img src="Images/icons8-estibador-64.png" alt="Docker">
+                                <span>Docker</span>
+                            </div>
+                            <div class="tech-pill">
+                                <img src="Images/antigravity-color.png" alt="Antigravity">
+                                <span>Antigravity AI</span>
+                            </div>
+                        </div>
+                        <div class="mt-3 pt-3 border-top border-secondary">
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge-tech"><i class="bi bi-check2-circle me-1"></i>Clean Architecture</span>
+                                <span class="badge-tech"><i class="bi bi-boxes me-1"></i>Microservicios</span>
+                                <span class="badge-tech"><i class="bi bi-hdd-network me-1"></i>RESTful APIs</span>
+                                <span class="badge-tech"><i class="bi bi-phone me-1"></i>PWA</span>
+                                <span class="badge-tech"><i class="bi bi-diagram-3 me-1"></i>System Design</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="glass-card">
-                <h3 class="h5 text-accent mb-3">En Aprendizaje</h3>
-                <div class="d-flex flex-wrap align-items-center gap-3">
-                    <img src="Images/csharp.png" alt="C#" class="tech-icon" title="C#">
+
+                <!-- Backend -->
+                <div class="col-12 col-lg-6">
+                    <div class="glass-card h-100">
+                        <h3 class="h5 text-accent mb-3 d-flex align-items-center">
+                            <i class="bi bi-hdd-network-fill me-2"></i>Backend & Frameworks
+                        </h3>
+                        <div class="tech-grid">
+                            <div class="tech-pill">
+                                <img src="Images/nest.png" alt="NestJS">
+                                <span>NestJS</span>
+                            </div>
+                            <div class="tech-pill">
+                                <img src="Images/node.png" alt="Node.js">
+                                <span>Node.js</span>
+                            </div>
+                            <div class="tech-pill">
+                                <img src="Images/net.png" alt=".NET Core">
+                                <span>.NET Core</span>
+                            </div>
+                            <div class="tech-pill">
+                                <img src="Images/csharp.png" alt="C#">
+                                <span>C#</span>
+                            </div>
+                            <div class="tech-pill">
+                                <img src="Images/typescript.png" alt="TypeScript">
+                                <span>TypeScript</span>
+                            </div>
+                            <div class="tech-pill">
+                                <img src="Images/php.png" alt="PHP">
+                                <span>PHP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frontend -->
+                <div class="col-12 col-lg-6">
+                    <div class="glass-card h-100">
+                        <h3 class="h5 text-accent mb-3 d-flex align-items-center">
+                            <i class="bi bi-window-desktop me-2"></i>Frontend & Interfaces
+                        </h3>
+                        <div class="tech-grid">
+                            <div class="tech-pill">
+                                <img src="Images/react.png" alt="React">
+                                <span>React</span>
+                            </div>
+                            <div class="tech-pill">
+                                <img src="Images/icons8-ver-js-64.png" alt="Vue.js">
+                                <span>Vue.js</span>
+                            </div>
+                            <div class="tech-pill">
+                                <img src="Images/blazor.png" alt="Blazor">
+                                <span>Blazor</span>
+                            </div>
+                            <div class="tech-pill">
+                                <img src="Images/js.png" alt="JavaScript">
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="tech-pill">
+                                <img src="Images/html.png" alt="HTML5">
+                                <span>HTML5</span>
+                            </div>
+                            <div class="tech-pill">
+                                <img src="Images/css.png" alt="CSS3">
+                                <span>CSS3</span>
+                            </div>
+                            <div class="tech-pill">
+                                <img src="Images/bootstrap.png" alt="Bootstrap">
+                                <span>Bootstrap</span>
+                            </div>
+                            <div class="tech-pill">
+                                <img src="Images/icons8-viento-de-cola-css-64.png" alt="Tailwind CSS">
+                                <span>Tailwind CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bases de Datos & ORMs -->
+                <div class="col-12 col-lg-6">
+                    <div class="glass-card h-100">
+                        <h3 class="h5 text-accent mb-3 d-flex align-items-center">
+                            <i class="bi bi-database-fill me-2"></i>Bases de Datos & ORMs
+                        </h3>
+                        <div class="tech-grid">
+                            <div class="tech-pill">
+                                <img src="Images/postgresql.png" alt="PostgreSQL">
+                                <span>PostgreSQL</span>
+                            </div>
+                            <div class="tech-pill">
+                                <img src="Images/servidor-sql.png" alt="SQL Server">
+                                <span>SQL Server</span>
+                            </div>
+                            <div class="tech-pill">
+                                <img src="Images/icons8-mysql-64.png" alt="MySQL">
+                                <span>MySQL</span>
+                            </div>
+                            <div class="tech-pill">
+                                <img src="Images/mongo.png" alt="MongoDB">
+                                <span>MongoDB</span>
+                            </div>
+                            <div class="tech-pill">
+                                <img src="Images/prisma.png" alt="Prisma">
+                                <span>Prisma ORM</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -113,56 +274,96 @@
         <section id="experience" class="mb-5 fade-up">
             <h2 class="mb-4"><i class="bi bi-briefcase-fill text-accent me-2"></i>Experiencia</h2>
             <ul class="list-group list-unstyled">
-                <li class="glass-card mb-3">
-                    <div class="d-flex justify-content-between align-items-start flex-wrap mb-2">
-                        <h5 class="text-accent mb-1">Desarrollador Frontend - Sitio web SaaS "Aythen"</h5>
-                        <span class="badge bg-secondary">Enero-Marzo 2026</span>
+                <!-- 1. Arquitecto de Software & Consultor Técnico (Destacado) -->
+                <li class="glass-card glass-card-featured mb-4">
+                    <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-2">
+                        <div>
+                            <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                <h4 class="h5 text-accent mb-0 fw-bold">Arquitecto de Software & Consultor Técnico</h4>
+                                <span class="badge-role">Liderazgo & Arquitectura</span>
+                            </div>
+                            <p class="text-light fw-medium mb-0 small">Sistemas Distribuidos, Soluciones Cloud &
+                                Gobernanza Técnica</p>
+                        </div>
+                        <span class="badge-date badge-date-active">2025 - Presente</span>
                     </div>
-                    <p class="text-muted-custom m-0">
-                        Implementé el sistema de tema oscuro mediante un CSS global con variables de color, mejoré la
-                        responsividad de componentes existentes y desarrollé la funcionalidad de personalización del
-                        color principal del sistema aplicada a botones, íconos y otros elementos. El frontend fue
-                        desarrollado con React y CSS.
+                    <p class="text-muted-custom mb-3">
+                        Liderazgo técnico y consultoría en el diseño arquitectónico de plataformas web empresariales,
+                        portales institucionales y servicios SaaS. Definición de contratos técnicos, modularidad y
+                        rendimiento óptimo mediante patrones de Clean Architecture y microservicios.
                     </p>
+                    <ul class="text-muted-custom small mb-0 ps-3">
+                        <li class="mb-2"><strong class="text-light">Diseño de Sistemas & APIs:</strong> Definición de la
+                            estructura de servicios modulares y desarrollo de APIs RESTful robustas y tipadas con
+                            NestJS, Node.js y .NET Core.</li>
+                        <li class="mb-2"><strong class="text-light">Modelado de Datos & Escalabilidad:</strong> Diseño y
+                            afinación de esquemas relacionales y NoSQL (PostgreSQL, MySQL, SQL Server, MongoDB) con
+                            Prisma ORM, optimizando índices y consultas críticas.</li>
+                        <li class="mb-2"><strong class="text-light">Contenerización & DevOps:</strong> Estandarización
+                            de entornos de desarrollo con Docker para asegurar reproducibilidad y simplificar
+                            despliegues en producción.</li>
+                        <li><strong class="text-light">Buenas Prácticas & AI Tooling:</strong> Implementación de
+                            directrices de código limpio, testing y adopción de herramientas de IA asistida para
+                            acelerar ciclos de entrega con altos estándares de calidad.</li>
+                    </ul>
                 </li>
-                <li class="glass-card mb-3">
-                    <div class="d-flex justify-content-between align-items-start flex-wrap mb-2">
-                        <h5 class="text-accent mb-1">Desarrollador Backend y Frontend - PWA “Sysne Control Vehicular”</h5>
-                        <span class="badge bg-secondary">Enero-Mayo 2025</span>
+
+                <!-- 2. Ingeniero de Software Full Stack -->
+                <li class="glass-card mb-4">
+                    <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-2">
+                        <div>
+                            <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                <h4 class="h5 text-accent mb-0 fw-bold">Ingeniero de Software Full Stack</h4>
+                                <span class="badge-role">Desarrollo Integral & PWAs</span>
+                            </div>
+                            <p class="text-light fw-medium mb-0 small">Aplicaciones Web Empresariales, Sistemas
+                                Operativos & SaaS</p>
+                        </div>
+                        <span class="badge-date">2022 - 2025</span>
                     </div>
-                    <p class="text-muted-custom m-0">
-                        El backend fue desarrollado utilizando .NET Core para la gestión y manipulación de datos. La
-                        interfaz de usuario se implementó con Blazor, lo que permitió una experiencia interactiva y
-                        moderna. Para el almacenamiento de la información se empleó SQL Server como sistema de gestión
-                        de bases de datos.
+                    <p class="text-muted-custom mb-3">
+                        Desarrollo de punta a punta de plataformas operativas, aplicaciones web progresivas (PWA) y
+                        productos SaaS, articulando interfaces de usuario dinámicas con servicios backend
+                        transaccionales de alta concurrencia.
                     </p>
+                    <ul class="text-muted-custom small mb-0 ps-3">
+                        <li class="mb-2"><strong class="text-light">Frontend Moderno & Reactivo:</strong> Construcción
+                            de interfaces responsivas y de alto rendimiento utilizando React, Vue.js, Blazor,
+                            TypeScript, Tailwind CSS y Bootstrap.</li>
+                        <li class="mb-2"><strong class="text-light">Lógica de Servidor & Servicios:</strong>
+                            Implementación de lógica transaccional, autenticación y servicios backend con .NET Core,
+                            Node.js y PHP.</li>
+                        <li><strong class="text-light">Sistemas Industriales y Comerciales:</strong> Participación clave
+                            en soluciones de gestión para control vehicular, administración operativa (ERP), puntos de
+                            venta y facturación electrónica.</li>
+                    </ul>
                 </li>
+
+                <!-- 3. Desarrollador Web & Soluciones Digitales -->
                 <li class="glass-card mb-3">
-                    <div class="d-flex justify-content-between align-items-start flex-wrap mb-2">
-                        <h5 class="text-accent mb-1">Desarrollador Backend y Frontend - SACI</h5>
-                        <span class="badge bg-secondary">Enero-Abril 2023</span>
+                    <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-2">
+                        <div>
+                            <div class="d-flex align-items-center gap-2 flex-wrap mb-1">
+                                <h4 class="h5 text-accent mb-0 fw-bold">Desarrollador Web & Soluciones Digitales</h4>
+                                <span class="badge-role">Bases Web & Telemetría IoT</span>
+                            </div>
+                            <p class="text-light fw-medium mb-0 small">Desarrollo Web Cliente-Servidor & Sistemas
+                                Conectados</p>
+                        </div>
+                        <span class="badge-date">2019 - 2022</span>
                     </div>
-                    <p class="text-muted-custom m-0">
-                        Desarrollo del backend utilizando Node.js y el frontend con Apache Cordova para la app y para el sitio web se utilizó HTML, JavaScript y framework de CSS Bootstrap. Además, se implementó un sistema con Arduino para la recolección de datos mediante sensores, utilizando Python para procesar y manipular la información obtenida.
+                    <p class="text-muted-custom mb-3">
+                        Construcción de sitios y portales web comerciales, integración de servicios dinámicos y
+                        desarrollo de prototipos tecnológicos de monitoreo que vinculan software y hardware.
                     </p>
-                </li>
-                <li class="glass-card mb-3">
-                    <div class="d-flex justify-content-between align-items-start flex-wrap mb-2">
-                        <h5 class="text-accent mb-1">Desarrollador Backend y Frontend - Sitio web y app “Trends”</h5>
-                        <span class="badge bg-secondary">Mayo-Agosto 2022</span>
-                    </div>
-                    <p class="text-muted-custom m-0">
-                        Desarrolló del sitio web empleando HTML, JavaScript y el framework de CSS Bootstrap. Para la visualizacion en telefono se creo una app hibrida, para el backend se utilizo PHP.
-                    </p>
-                </li>
-                <li class="glass-card mb-3">
-                    <div class="d-flex justify-content-between align-items-start flex-wrap mb-2">
-                        <h5 class="text-accent mb-1">Desarrollador Backend y Frontend - Sitio web “MarketTrends”</h5>
-                        <span class="badge bg-secondary">Abril-Junio 2019</span>
-                    </div>
-                    <p class="text-muted-custom m-0">
-                        Desarrollo del backend con PHP y AJAX para la obtención de datos para ser integrados en el sitio web diseñado con HTML, CSS y JavaScript.
-                    </p>
+                    <ul class="text-muted-custom small mb-0 ps-3">
+                        <li class="mb-2"><strong class="text-light">Desarrollo Web Dinámico:</strong> Implementación de
+                            arquitecturas cliente-servidor con PHP, JavaScript nativo, AJAX y gestión de bases de datos
+                            relacionales MySQL.</li>
+                        <li><strong class="text-light">Integración IoT & Sensores:</strong> Desarrollo de soluciones de
+                            recolección de variables ambientales y telemetría mediante microcontroladores Arduino y
+                            procesamiento de datos en Python.</li>
+                    </ul>
                 </li>
             </ul>
         </section>
@@ -185,7 +386,7 @@
                         <h5 class="text-accent mb-3">Universidad Tecnológica de Izúcar de Matamoros</h5>
                         <p class="text-muted-custom fw-bold mb-1">ING. en Tecnologías de la Información</p>
                         <p class="text-muted-custom small mb-2">Área Desarrollo y Gestión de Software</p>
-                        <span class="badge bg-secondary">2023 - 2025</span>
+                        <span class="badge-date">2023 - 2025</span>
                     </div>
                 </div>
                 <div class="col-12 col-md-4">
@@ -193,7 +394,7 @@
                         <h5 class="text-accent mb-3">Universidad Tecnológica de Izúcar de Matamoros</h5>
                         <p class="text-muted-custom fw-bold mb-1">TSU. en Tecnologías de la Información</p>
                         <p class="text-muted-custom small mb-2">Área Desarrollo de Software Multiplataforma</p>
-                        <span class="badge bg-secondary">2021 - 2023</span>
+                        <span class="badge-date">2021 - 2023</span>
                     </div>
                 </div>
                 <div class="col-12 col-md-4">
@@ -201,7 +402,7 @@
                         <h5 class="text-accent mb-3">C.B.T.I.S. NO. 184 Izúcar de Matamoros</h5>
                         <p class="text-muted-custom fw-bold mb-1">Técnico en Programación</p>
                         <p class="text-muted-custom small mb-2">Educación Media Superior</p>
-                        <span class="badge bg-secondary">2018 - 2021</span>
+                        <span class="badge-date">2018 - 2021</span>
                     </div>
                 </div>
             </div>
@@ -214,7 +415,8 @@
             <div class="modal-content glass-card p-0 border-0">
                 <div class="modal-header border-bottom border-secondary">
                     <h5 class="modal-title text-accent" id="exampleModalLabel">Información del Proyecto</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-white">
                     <div id="modalTextContent">Cargando contenido...</div>
@@ -236,13 +438,16 @@
                 </div>
 
                 <div class="d-flex gap-3">
-                    <a href="https://www.instagram.com/david.lozano.hernandez/profilecard/?igsh=d3hsbHR3cjZ6NjQw" target="_blank" class="btn btn-social rounded-circle p-2" aria-label="Instagram">
+                    <a href="https://www.instagram.com/david.lozano.hernandez/profilecard/?igsh=d3hsbHR3cjZ6NjQw"
+                        target="_blank" class="btn btn-social rounded-circle p-2" aria-label="Instagram">
                         <i class="bi bi-instagram fs-5 d-flex"></i>
                     </a>
-                    <a href="https://www.twitch.tv/the_white_death____" target="_blank" class="btn btn-social rounded-circle p-2" aria-label="Twitch">
+                    <a href="https://www.twitch.tv/the_white_death____" target="_blank"
+                        class="btn btn-social rounded-circle p-2" aria-label="Twitch">
                         <i class="bi bi-twitch fs-5 d-flex"></i>
                     </a>
-                    <a href="https://www.youtube.com/@Lofi_Wolf" target="_blank" class="btn btn-social rounded-circle p-2" aria-label="YouTube">
+                    <a href="https://www.youtube.com/@Lofi_Wolf" target="_blank"
+                        class="btn btn-social rounded-circle p-2" aria-label="YouTube">
                         <i class="bi bi-youtube fs-5 d-flex"></i>
                     </a>
                 </div>

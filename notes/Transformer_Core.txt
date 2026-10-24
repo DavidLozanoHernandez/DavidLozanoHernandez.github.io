@@ -1,0 +1,9 @@
+Transformer Core OS (Inzunza Transformadores).
+
+Sistema integral de gestión operativa y control de servicios para transformadores eléctricos industriales. Centraliza el ciclo completo de operación: recepción de solicitudes de servicio, emisión y seguimiento de órdenes de trabajo, asignación inteligente de cuadrillas de campo y expediente histórico detallado por cada transformador y equipo atendido.
+
+Tecnologías implementadas:
+- PHP para el backend y reglas de negocio del sistema
+- Vue.js para componentes reactivos y vistas operativas en tiempo real
+- MySQL para la persistencia de datos de órdenes, técnicos y transformadores
+- Tailwind CSS para un diseño limpio, profesional e intuitivo con soporte de modo oscuro.

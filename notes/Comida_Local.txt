@@ -1,0 +1,9 @@
+ComidaToGo - Plataforma web para pedidos y exploración de comida local y restaurantes a domicilio ("Comida local, directo a tu mesa").
+
+Permite a los usuarios descubrir los mejores restaurantes y puestos de su ciudad, consultar cartas y menús, buscar por platillos o restaurantes cercanos mediante geolocalización GPS, y realizar pedidos para llevar o entrega a domicilio de manera ágil.
+
+Tecnologías implementadas:
+- Vue.js para la reactividad en el catálogo interactivo de platillos, filtros y carrito
+- PHP para el procesamiento del backend, pedidos y gestión de datos
+- MySQL para el almacenamiento de restaurantes, platillos y órdenes
+- Tailwind CSS para una interfaz moderna, visual y adaptable a cualquier dispositivo móvil o de escritorio.

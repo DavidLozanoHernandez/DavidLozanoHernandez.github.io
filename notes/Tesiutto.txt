@@ -1,0 +1,10 @@
+Tesiutto - Cortinas & Persianas (Portal Administrativo & Sistema de Gestión).
+
+Plataforma de gestión interna y atención a clientes para empresa especializada en cortinas y persianas decorativas. Proporciona control de presupuestos, órdenes de confección, catálogos y seguimiento de pedidos, integrando autenticación segura mediante credenciales y Google OAuth.
+
+Tecnologías implementadas:
+- Vue.js para la interfaz reactiva del portal, visualización de productos y paneles de gestión
+- Node.js & TypeScript para la arquitectura del servidor y servicios API
+- Prisma ORM para la capa de acceso a datos eficiente y mantenible
+- MySQL para la base de datos relacional de clientes, telas, modelos y cotizaciones
+- Tailwind CSS para una interfaz corporativa estilizada, moderna y responsiva.

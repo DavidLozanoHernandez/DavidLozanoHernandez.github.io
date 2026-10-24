@@ -1,0 +1,8 @@
+Plataforma web institucional desarrollada para el Centro de Investigación de Educación Especial y Políticas Educativas (CIEEPE / ENEES).
+
+Diseñada para consolidar y difundir la investigación científica, la innovación y la inclusión educativa. La plataforma cuenta con módulos de visualización y administración de líneas de investigación, proyectos científicos, convocatorias institucionales, publicaciones y directorio de investigadores.
+
+Tecnologías implementadas:
+- PHP nativo para la lógica y gestión de contenidos
+- MySQL para la base de datos relacional
+- Tailwind CSS para una interfaz moderna, limpia y totalmente responsiva.

@@ -1,0 +1,10 @@
+Mercadito - Sistema de Punto de Venta (POS) & Administración de Comercios.
+
+Solución web para pequeños y medianos comercios que centraliza el control de ventas, caja registradora, inventario de productos, tickets y gestión multi-tienda. Permite a los cajeros y encargados acceder de forma segura con sus credenciales y a los propietarios administrar o dar de alta nuevas tiendas comerciales.
+
+Tecnologías implementadas:
+- Vue.js para la interfaz reactiva del punto de venta, gestión de carrito y cobro ágil
+- Node.js & TypeScript para el desarrollo de APIs robustas y tipadas
+- Prisma ORM para el mapeo objeto-relacional y migraciones de datos
+- PostgreSQL como motor de base de datos relacional para integridad transaccional
+- CSS personalizado con un diseño enfocado en usabilidad de caja y pantallas táctiles.

@@ -1,126 +1,361 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
-:root {
-    --slate-900: #0F172A;
-    --slate-800: #1E293B;
-    --slate-400: #94A3B8;
-    --sky-400: #38BDF8;
-    --sky-500: #0EA5E9;
-    --glass-bg: rgba(30, 41, 59, 0.7);
-    --glass-border: rgba(255, 255, 255, 0.1);
+/* Color Variables (Dark Mode Default) */
+:root,
+[data-bs-theme="dark"] {
+    --bg-page: #0B1120;
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --card-bg: #151F32;
+    --card-border: rgba(255, 255, 255, 0.09);
+    --glass-bg: rgba(15, 23, 42, 0.78);
+    --pill-bg: rgba(21, 31, 50, 0.85);
+    --pill-hover-bg: rgba(30, 41, 59, 0.95);
+    --sky-accent: #38BDF8;
+    --sky-hover: #0EA5E9;
+    --featured-gradient: linear-gradient(135deg, rgba(21, 31, 50, 0.95) 0%, rgba(14, 165, 233, 0.14) 100%);
+    --card-shadow: rgba(0, 0, 0, 0.5);
+    --btn-glass-bg: rgba(255, 255, 255, 0.04);
+    --btn-glass-border: rgba(255, 255, 255, 0.12);
+}
+
+/* Light Mode Variables */
+[data-bs-theme="light"] {
+    --bg-page: #F8FAFC;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --card-bg: #FFFFFF;
+    --card-border: rgba(0, 0, 0, 0.07);
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --pill-bg: #F1F5F9;
+    --pill-hover-bg: #E2E8F0;
+    --sky-accent: #0284C7;
+    --sky-hover: #0369A1;
+    --featured-gradient: linear-gradient(135deg, #FFFFFF 0%, rgba(2, 132, 199, 0.08) 100%);
+    --card-shadow: rgba(15, 23, 42, 0.08);
+    --btn-glass-bg: rgba(15, 23, 42, 0.04);
+    --btn-glass-border: rgba(15, 23, 42, 0.1);
 }
 
 body {
-    background-color: var(--slate-900);
-    color: #F8FAFC;
+    background-color: var(--bg-page);
+    color: var(--text-primary);
     font-family: 'Outfit', sans-serif;
     -webkit-font-smoothing: antialiased;
+    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
-    color: #F8FAFC;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
 }
 
 .text-muted-custom {
-    color: var(--slate-400) !important;
+    color: var(--text-secondary) !important;
 }
 
 .text-accent {
-    color: var(--sky-400) !important;
+    color: var(--sky-accent) !important;
 }
 
 /* Glassmorphism Navbar */
 .glass-nav {
     background-color: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--glass-border);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--card-border);
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Buttons */
+.glass-nav .navbar-brand {
+    color: var(--text-primary) !important;
+}
+
+/* ==========================================================================
+   PREMIUM BUTTONS SYSTEM
+   ========================================================================== */
+
+/* 1. Theme Toggle Pill Button */
+.btn-theme-toggle {
+    background: var(--btn-glass-bg);
+    border: 1px solid var(--btn-glass-border);
+    border-radius: 9999px;
+    padding: 0.38rem 0.85rem;
+    color: var(--text-primary);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.btn-theme-toggle:hover {
+    background: var(--pill-hover-bg);
+    border-color: var(--sky-accent);
+    color: var(--sky-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(56, 189, 248, 0.25);
+}
+
+.theme-icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgba(56, 189, 248, 0.12);
+    transition: transform 0.3s ease;
+}
+
+.btn-theme-toggle:hover .theme-icon-box {
+    transform: rotate(20deg) scale(1.1);
+}
+
+.theme-text-label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+/* 2. Navbar Action Button (Bibliografía) */
+.btn-nav-action {
+    background: var(--btn-glass-bg);
+    border: 1px solid var(--btn-glass-border);
+    border-radius: 9999px;
+    padding: 0.42rem 1.05rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.88rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-nav-action:hover {
+    background: var(--pill-hover-bg);
+    border-color: var(--sky-accent);
+    color: var(--sky-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(56, 189, 248, 0.25);
+}
+
+/* 3. Hero CTA Button (Contáctame) */
 .btn-primary-custom {
-    background-color: var(--sky-500);
-    border-color: var(--sky-500);
+    background: linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 9999px;
     color: white;
-    transition: all 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    padding: 0.65rem 1.75rem;
+    box-shadow: 0 4px 18px rgba(14, 165, 233, 0.38);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-primary-custom:hover {
-    background-color: var(--sky-400);
-    border-color: var(--sky-400);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+    background: linear-gradient(135deg, #38BDF8 0%, #0EA5E9 100%);
     color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(14, 165, 233, 0.55);
 }
 
+/* 4. Social & Secondary Glass Buttons */
 .btn-social {
-    background-color: var(--slate-800);
-    border: 1px solid var(--glass-border);
-    color: white;
-    transition: all 0.3s ease;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 9999px;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.65rem 1.45rem;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(8px);
 }
 
 .btn-social:hover {
-    background-color: var(--slate-900);
-    border-color: var(--sky-400);
-    color: var(--sky-400);
+    background: var(--pill-hover-bg);
+    border-color: var(--sky-accent);
+    color: var(--sky-accent);
     transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(56, 189, 248, 0.22);
 }
 
-/* Cards & Containers */
+/* 5. Project Card Action Buttons */
+.btn-card-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--pill-bg);
+    border: 1px solid var(--card-border);
+    color: var(--sky-accent);
+    padding: 0;
+    margin-right: 0.4rem;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.btn-card-action:hover {
+    background: var(--sky-accent);
+    color: white !important;
+    border-color: var(--sky-accent);
+    transform: translateY(-3px) scale(1.08);
+    box-shadow: 0 6px 16px rgba(56, 189, 248, 0.4);
+}
+
+/* ==========================================================================
+   PREMIUM BADGES & PILLS SYSTEM
+   ========================================================================== */
+
+/* Tech Keywords (Architecture, DevOps, etc.) */
+.badge-tech {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.38rem 0.82rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    border-radius: 9999px;
+    transition: all 0.25s ease;
+    background: rgba(56, 189, 248, 0.08);
+    color: var(--sky-accent);
+    border: 1px solid rgba(56, 189, 248, 0.24);
+}
+
+.badge-tech:hover {
+    background: rgba(56, 189, 248, 0.16);
+    border-color: var(--sky-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2);
+}
+
+/* Role / Specialty Badges */
+.badge-role {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.38rem 0.85rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border-radius: 9999px;
+    background: rgba(14, 165, 233, 0.12);
+    color: var(--sky-accent);
+    border: 1px solid rgba(14, 165, 233, 0.28);
+    white-space: nowrap;
+}
+
+/* Date / Period Badges */
+.badge-date {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border-radius: 9999px;
+    background: var(--pill-bg);
+    color: var(--text-secondary);
+    border: 1px solid var(--card-border);
+    white-space: nowrap;
+}
+
+.badge-date-active {
+    background: linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%) !important;
+    color: white !important;
+    border: none !important;
+    box-shadow: 0 3px 12px rgba(14, 165, 233, 0.38);
+}
+
+/* Software Architect Badge */
+.badge-architect {
+    background: rgba(14, 165, 233, 0.14);
+    color: var(--sky-accent);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    font-weight: 700;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 9999px;
+    padding: 0.35rem 0.8rem;
+}
+
+/* ==========================================================================
+   CARDS & CONTAINERS
+   ========================================================================== */
+
 .glass-card {
-    background-color: var(--slate-800);
-    border: 1px solid var(--glass-border);
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: all 0.3s ease;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 1.6rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .glass-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    border-color: var(--sky-400);
+    box-shadow: 0 12px 30px var(--card-shadow);
+    border-color: var(--sky-accent);
 }
 
 /* Bootstrap Card Overrides (for JS generated cards) */
 .card {
-    background-color: var(--slate-800) !important;
-    border: 1px solid var(--glass-border) !important;
-    border-radius: 12px !important;
-    color: #F8FAFC !important;
-    transition: all 0.3s ease !important;
+    background-color: var(--card-bg) !important;
+    border: 1px solid var(--card-border) !important;
+    border-radius: 16px !important;
+    color: var(--text-primary) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
     height: 100%;
+    overflow: hidden;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    border-color: var(--sky-400) !important;
+    box-shadow: 0 14px 32px var(--card-shadow);
+    border-color: var(--sky-accent) !important;
 }
 
 .card-body {
-    color: var(--slate-400);
+    color: var(--text-secondary);
+    padding: 1.4rem;
 }
 
 .card-title {
-    color: var(--sky-400) !important;
+    color: var(--sky-accent) !important;
     font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.card-img-top {
+    height: 195px;
+    object-fit: cover;
+    object-position: top center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: transform 0.4s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.02);
 }
 
 /* Images */
 .profile-img {
-    border: 4px solid var(--slate-800);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    transition: transform 0.3s ease;
+    border: 4px solid var(--card-bg);
+    box-shadow: 0 10px 25px var(--card-shadow);
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
+
 .profile-img:hover {
     transform: scale(1.02);
-    border-color: var(--sky-400);
+    border-color: var(--sky-accent);
 }
 
 .tech-icon {
@@ -128,17 +363,19 @@ h1, h2, h3, h4, h5, h6 {
     height: 60px;
     object-fit: contain;
     margin: 10px;
-    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
     transition: transform 0.3s ease;
 }
+
 .tech-icon:hover {
     transform: translateY(-5px) scale(1.1);
 }
 
 /* Footer */
 .glass-footer {
-    background-color: var(--slate-800);
-    border-top: 1px solid var(--glass-border);
+    background-color: var(--card-bg);
+    border-top: 1px solid var(--card-border);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 /* Animations */
@@ -155,4 +392,83 @@ h1, h2, h3, h4, h5, h6 {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Tech Grid & Pills */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.85rem;
+}
+
+.tech-pill {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.58rem 0.9rem;
+    background: var(--pill-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    transition: all 0.25s ease;
+}
+
+.tech-pill:hover {
+    transform: translateY(-3px);
+    border-color: var(--sky-accent);
+    background: var(--pill-hover-bg);
+    box-shadow: 0 4px 14px rgba(56, 189, 248, 0.25);
+}
+
+.tech-pill img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
+}
+
+.tech-pill span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    white-space: nowrap;
+}
+
+/* Featured Architecture Card */
+.glass-card-featured {
+    background: var(--featured-gradient) !important;
+    border: 1px solid rgba(56, 189, 248, 0.4) !important;
+    box-shadow: 0 8px 30px rgba(14, 165, 233, 0.15) !important;
+}
+
+/* Modal Styling */
+.modal-content {
+    background-color: var(--card-bg) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--card-border) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 20px 40px var(--card-shadow) !important;
+}
+
+.modal-header,
+.modal-footer {
+    border-color: var(--card-border) !important;
+}
+
+.modal-body {
+    color: var(--text-primary) !important;
+    line-height: 1.7;
+}
+
+/* Light Theme Specific Overrides */
+[data-bs-theme="light"] .text-light,
+[data-bs-theme="light"] .text-white {
+    color: var(--text-primary) !important;
+}
+
+[data-bs-theme="light"] .border-secondary {
+    border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+[data-bs-theme="light"] .btn-close-white {
+    filter: invert(1) grayscale(100%) brightness(20%) !important;
 }

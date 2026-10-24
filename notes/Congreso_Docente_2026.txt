@@ -1,0 +1,10 @@
+5º Congreso Internacional de Formación Docente Mazatlán 2026 (CIFOD / SEPyC Sinaloa).
+
+Plataforma oficial para el congreso internacional enfocado en escuelas normales y educación básica: "Formar para transformar nuestras escuelas normales y la educación básica: saberes, prácticas y horizontes para una escuela innovadora". Integra sistema de registro de asistentes, directivos e investigadores, consulta interactiva de ponencias y convocatorias, sedes, agenda de conferencias y panel personal para participantes.
+
+Tecnologías implementadas:
+- Node.js & TypeScript para una arquitectura backend tipada, segura y escalable
+- Vue.js en el frontend para interfaces reactivas y dinámicas
+- Prisma ORM para el modelado y consultas a la base de datos
+- MySQL para la persistencia de usuarios, folios de inscripción y eventos
+- Tailwind CSS para el diseño visual de alto impacto y soporte multidispositivo.
